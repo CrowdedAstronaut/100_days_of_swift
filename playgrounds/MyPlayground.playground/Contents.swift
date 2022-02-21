@@ -19,12 +19,20 @@ var greeting = "Hello, playground"
 //}
 
 
-func areIdentical (string1: String, string2: String) -> Bool {
-	if string1.sorted() == string2.sorted() {
-		return true;
-	} else {
-		return false;
-	}
-}
+//func areIdentical (string1: String, string2: String) -> Bool {
+//	if string1.sorted() == string2.sorted() {
+//		return true;
+//	} else {
+//		return false;
+//	}
+//}
+//
+//areIdentical(string1: "abc", string2: "cab")
 
-areIdentical(string1: "abc", string2: "cab")
+
+//func pythagorus(a:Double, b:Double) -> Double{
+//	sqrt(a * a + b * b)	
+//}
+//
+//let c = pythagorus(a: 3, b: 4)
+//print(c)
