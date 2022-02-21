@@ -76,3 +76,18 @@ var greeting = "Hello, playground"
 //while loops let us craft custom loops that will continue running until a condition becomes false.
 //We can skip some or all loop items using continue or break respectively.
 //That’s another huge chunk of new material, but with conditions and loops you now know enough to build some really useful software – give it a try!
+
+//When should you omit a parameter label?
+
+//If we use an underscore for a function parameter’s external label, Swift lets us use no name for that parameter at all. This is very common practice in some parts of Swift development, particularly when building apps that don’t use SwiftUI, but there are many other times when you’ll also want to use this.
+//
+//The main reason for skipping a parameter name is when your function name is a verb and the first parameter is a noun the verb is acting on. For example:
+//
+//Greeting a person would be greet(taylor) rather than greet(person: taylor)
+//Buying a product would be buy(toothbrush) rather than buy(item: toothbrush)
+//Finding a customer would be find(customer) rather than find(user: customer)
+//This is particularly important when the parameter label is likely to be the same as the name of whatever you’re passing in:
+//
+//Singing a song would be sing(song) rather than sing(song: song)
+//Enabling an alarm would be enable(alarm) rather than enable(alarm: alarm)
+//Reading a book would be read(book) rather than read(book: book)
