@@ -4,16 +4,27 @@ var greeting = "Hello, playground"
 
 //FizzBuzz 1
 	
-for i in 1...100 {
-	if i.isMultiple(of: 3) {
-		if i.isMultiple(of: 5) {
-			print("FizzBuzz")
-		} else {
-			print("Fizz")
-		}
-	}else if i.isMultiple(of: 5){
-		print("Buzz")
+//for i in 1...100 {
+//	if i.isMultiple(of: 3) {
+//		if i.isMultiple(of: 5) {
+//			print("FizzBuzz")
+//		} else {
+//			print("Fizz")
+//		}
+//	}else if i.isMultiple(of: 5){
+//		print("Buzz")
+//	} else {
+//		print(i)
+//	}
+//}
+
+
+func areIdentical (string1: String, string2: String) -> Bool {
+	if string1.sorted() == string2.sorted() {
+		return true;
 	} else {
-		print(i)
+		return false;
 	}
 }
+
+areIdentical(string1: "abc", string2: "cab")
