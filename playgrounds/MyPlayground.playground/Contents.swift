@@ -91,3 +91,12 @@ var greeting = "Hello, playground"
 //Singing a song would be sing(song) rather than sing(song: song)
 //Enabling an alarm would be enable(alarm) rather than enable(alarm: alarm)
 //Reading a book would be read(book) rather than read(book: book)
+
+
+//Functions let us reuse code easily by carving off chunks of code and giving it a name.
+//All functions start with the word func, followed by the function’s name. The function’s body is contained inside opening and closing braces.
+//We can add parameters to make our functions more flexible – list them out one by one separated by commas: the name of the parameter, then a colon, then the type of the parameter.
+//You can control how those parameter names are used externally, either by using a custom external parameter name or by using an underscore to disable the external name for that parameter.
+//If you think there are certain parameter values you’ll use repeatedly, you can make them have a default value so your function takes less code to write and does the smart thing by default.
+//Functions can return a value if you want, but if you want to return multiple pieces of data from a function you should use a tuple. These hold several named elements, but it’s limited in a way a dictionary is not – you list each element specifically, along with its type.
+//Functions can throw errors: you create an enum defining the errors you want to happen, throw those errors inside the function as needed, then use do, try, and catch to handle them at the call site.
