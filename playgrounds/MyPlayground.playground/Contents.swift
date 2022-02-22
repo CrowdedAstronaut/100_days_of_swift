@@ -100,3 +100,46 @@ var greeting = "Hello, playground"
 //If you think there are certain parameter values you’ll use repeatedly, you can make them have a default value so your function takes less code to write and does the smart thing by default.
 //Functions can return a value if you want, but if you want to return multiple pieces of data from a function you should use a tuple. These hold several named elements, but it’s limited in a way a dictionary is not – you list each element specifically, along with its type.
 //Functions can throw errors: you create an enum defining the errors you want to happen, throw those errors inside the function as needed, then use do, try, and catch to handle them at the call site.
+
+
+//enum sqrtError: Error {
+//	case tooLow, tooHigh, outOfBounds
+//	
+//}
+//func squareRoot(of num: Int) throws -> Int {
+//	if num < 1 {
+//		throw sqrtError.tooLow
+//	}
+//	
+//	else if num > 10_000 {
+//		throw sqrtError.tooHigh
+//	}
+//	
+//	for i in 1...100 {
+//		if i * i == num {
+//			return i
+//		}
+//	}
+//	
+//	throw sqrtError.outOfBounds
+//}
+//
+//
+//let number = 6561
+//
+//
+//do {
+//	let root = try squareRoot(of: number)
+//	print("The square root of \(number) is \(root)")
+//} catch sqrtError.tooLow {
+//	print("Sorry, \(number) was too low")
+//} catch sqrtError.tooHigh{
+//	print("Sorry, \(number) was too high")
+//} catch sqrtError.outOfBounds{
+//	print("Sorry, there were no integer results found for \(number) ")
+//} catch {
+//	print("Sorry there wa a problem")
+//}
+
+
+
