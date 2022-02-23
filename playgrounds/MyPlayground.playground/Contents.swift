@@ -138,8 +138,37 @@ var greeting = "Hello, playground"
 //} catch sqrtError.outOfBounds{
 //	print("Sorry, there were no integer results found for \(number) ")
 //} catch {
-//	print("Sorry there wa a problem")
+//	print("Sorry there was a problem")
 //}
 
+//
+//let sayHello = { (name: String) -> String in
+//	"Hi \(name)!"
+//}
 
+let team = ["Gloria", "Suzanne", "Piper", "Tiffany", "Tasha"]
+let sortedTeam = team.sorted()
+print(sortedTeam)
 
+//Example of closure
+func captainFirstSorted(name1: String, name2: String) -> Bool {
+	if name1 == "Suzanne" {
+		return true
+	} else if name2 == "Suzanne" {
+		return false
+	}
+
+	return name1 < name2
+}
+
+let captainFirstTeam = team.sorted(by: { (name1: String, name2: String) -> Bool in
+	if name1 == "Suzanne" {
+		return true
+	} else if name2 == "Suzanne" {
+		return false
+	}
+
+	return name1 < name2
+})
+
+print(captainFirstTeam)
