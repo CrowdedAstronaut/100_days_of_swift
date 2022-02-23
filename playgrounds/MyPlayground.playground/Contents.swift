@@ -202,3 +202,13 @@ var greeting = "Hello, playground"
 //If one or more of a function’s final parameters are functions, you can use trailing closure syntax.
 //You can also use shorthand parameter names such as $0 and $1, but I would recommend doing that only under some conditions.
 //You can make your own functions that accept functions as parameters, although in practice it’s much more important to know how to use them than how to create them.
+
+
+//Checkpoint 5
+//let luckyNumbers = [7, 4, 38, 21, 16, 15, 12, 33, 31, 49]
+//
+//let result = luckyNumbers.filter {$0.isMultiple(of: 2) == false}.sorted().map {"\($0) is a lucky number"}
+//
+//for item in result {
+//	print(item)
+//}
