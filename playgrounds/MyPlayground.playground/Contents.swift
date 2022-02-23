@@ -146,29 +146,59 @@ var greeting = "Hello, playground"
 //	"Hi \(name)!"
 //}
 
-let team = ["Gloria", "Suzanne", "Piper", "Tiffany", "Tasha"]
-let sortedTeam = team.sorted()
-print(sortedTeam)
+//let team = ["Gloria", "Suzanne", "Piper", "Tiffany", "Tasha"]
+//let sortedTeam = team.sorted()
+//print(sortedTeam)
+//
+////Example of closure
+//func captainFirstSorted(name1: String, name2: String) -> Bool {
+//	if name1 == "Suzanne" {
+//		return true
+//	} else if name2 == "Suzanne" {
+//		return false
+//	}
+//
+//	return name1 < name2
+//}
+//
+//let captainFirstTeam = team.sorted(by: { (name1: String, name2: String) -> Bool in
+//	if name1 == "Suzanne" {
+//		return true
+//	} else if name2 == "Suzanne" {
+//		return false
+//	}
+//
+//	return name1 < name2
+//})
+//
+//print(captainFirstTeam)
 
-//Example of closure
-func captainFirstSorted(name1: String, name2: String) -> Bool {
-	if name1 == "Suzanne" {
-		return true
-	} else if name2 == "Suzanne" {
-		return false
-	}
 
-	return name1 < name2
-}
+// Reasons for closures
+//One of the most common reasons for closures in Swift is to store functionality – to be able to say “here’s some work I want you to do at some point, but not necessarily now.” Some examples:
+//
+//Running some code after a delay.
+//Running some code after an animation has finished.
+//Running some code when a download has finished.
+//Running some code when a user has selected an option from your menu.
 
-let captainFirstTeam = team.sorted(by: { (name1: String, name2: String) -> Bool in
-	if name1 == "Suzanne" {
-		return true
-	} else if name2 == "Suzanne" {
-		return false
-	}
 
-	return name1 < name2
-})
+//Why are Swift’s closure parameters inside the braces?
+//Closures take their parameters inside the brace to avoid confusing Swift: if we had written let payment = (user: String, amount: Int) then it would look like we were trying to create a tuple, not a closure, which would be strange.
 
-print(captainFirstTeam)
+//Having the parameter list inside the braces shows why the in keyword is so important – without that it’s hard for Swift to know where your closure body actually starts, because there’s no second set of braces.
+
+
+//Closure Summary
+//We’ve covered a lot about closures in the previous chapters, so let’s recap:
+//
+//You can copy functions in Swift, and they work the same as the original except they lose their external parameter names.
+//All functions have types, just like other data types. This includes the parameters they receive along with their return type, which might be Void – also known as “nothing”.
+//You can create closures directly by assigning to a constant or variable.
+//Closures that accept parameters or return a value must declare this inside their braces, followed by the keyword in.
+//Functions are able to accept other functions as parameters. They must declare up front exactly what data those functions must use, and Swift will ensure the rules are followed.
+//In this situation, instead of passing a dedicated function you can also pass a closure – you can make one directly. Swift allows both approaches to work.
+//When passing a closure as a function parameter, you don’t need to explicitly write out the types inside your closure if Swift can figure it out automatically. The same is true for the return value – if Swift can figure it out, you don’t need to specify it.
+//If one or more of a function’s final parameters are functions, you can use trailing closure syntax.
+//You can also use shorthand parameter names such as $0 and $1, but I would recommend doing that only under some conditions.
+//You can make your own functions that accept functions as parameters, although in practice it’s much more important to know how to use them than how to create them.
