@@ -277,3 +277,46 @@ var greeting = "Hello, playground"
 //app.contacts.append("Adrian E")
 //app.contacts.append("Allen W")
 //app.contacts.append("Ish S")
+
+
+
+//Custom initializers are different
+//struct Player {
+//	let name: String
+//	let number: Int
+//
+//	init(name: String, number: Int) {
+//		self.name = name
+//		self.number = number
+//	}
+//}
+
+//There is no func keyword. Yes, this looks like a function in terms of its syntax, but Swift treats initializers specially.
+//Even though this creates a new Player instance, initializers never explicitly have a return type – they always return the type of data they belong to.
+//I’ve used self to assign parameters to properties to clarify we mean “assign the name parameter to my name property”.
+//struct Player {
+//	let name: String
+//	let number: Int
+//
+//	init(name: String) {
+//		self.name = name
+//		number = Int.random(in: 1...99)
+//	}
+//}
+//
+//let player = Player(name: "Megan R")
+//print(player.number)
+//
+//
+////custom initializer examples:
+//struct Student {
+//	var name: String
+//	var bestFriend: String
+//
+//	init(name: String, bestFriend: String) {
+//		print("Enrolling \(name) in class…")
+//		self.name = name
+//		self.bestFriend = bestFriend
+//	}
+//}
+
