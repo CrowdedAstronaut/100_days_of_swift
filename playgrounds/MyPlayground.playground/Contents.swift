@@ -212,3 +212,22 @@ var greeting = "Hello, playground"
 //for item in result {
 //	print(item)
 //}
+
+
+struct Employee {
+	let name: String
+	var vacationRemaining: Int
+
+	mutating func takeVacation(days: Int) {
+		if vacationRemaining > days {
+			vacationRemaining -= days
+			print("I'm going on vacation!")
+			print("Days remaining: \(vacationRemaining)")
+		} else {
+			print("Oops! There aren't enough days remaining.")
+		}
+	}
+}
+
+
+var archer = Employee(name: "Sterling Archer", vacationRemaining: 14)
