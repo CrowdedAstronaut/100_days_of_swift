@@ -320,3 +320,26 @@ var greeting = "Hello, playground"
 //	}
 //}
 
+
+struct BankAccount {
+	var funds = 0
+
+	mutating func deposit(amount: Int) {
+		funds += amount
+	}
+
+	mutating func withdraw(amount: Int) -> Bool {
+		if funds > amount {
+			funds -= amount
+			return true
+		} else {
+			return false
+		}
+	}
+}
+
+//To solve this, we can tell Swift that funds should be accessible only inside the struct – by methods that belong to the struct, as well as any computed properties, property observers, and so on.
+//
+//This takes only one extra word:
+//
+//private var funds = 0
