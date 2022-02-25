@@ -320,26 +320,64 @@ var greeting = "Hello, playground"
 //	}
 //}
 
-
-struct BankAccount {
-	var funds = 0
-
-	mutating func deposit(amount: Int) {
-		funds += amount
-	}
-
-	mutating func withdraw(amount: Int) -> Bool {
-		if funds > amount {
-			funds -= amount
-			return true
-		} else {
-			return false
-		}
-	}
-}
+//
+//struct BankAccount {
+//	var funds = 0
+//
+//	mutating func deposit(amount: Int) {
+//		funds += amount
+//	}
+//
+//	mutating func withdraw(amount: Int) -> Bool {
+//		if funds > amount {
+//			funds -= amount
+//			return true
+//		} else {
+//			return false
+//		}
+//	}
+//}
 
 //To solve this, we can tell Swift that funds should be accessible only inside the struct – by methods that belong to the struct, as well as any computed properties, property observers, and so on.
 //
 //This takes only one extra word:
 //
 //private var funds = 0
+
+
+//struct School {
+//	static var studentCount = 0
+//
+//	static func add(student: String) {
+//		print("\(student) joined the school.")
+//		studentCount += 1
+//	}
+//}
+//
+//
+//struct AppData {
+//	static let version = "1.3 beta 2"
+//	static let saveFilename = "settings.json"
+//	static let homeURL = "https://www.hackingwithswift.com"
+//}
+//
+//struct Employee {
+//	let username: String
+//	let password: String
+//
+//	static let example = Employee(username: "cfederighi", password: "hairforceone")
+//}
+
+//Structs are used almost everywhere in Swift: String, Int, Double, Array and even Bool are all implemented as structs, and now you can recognize that a function such as isMultiple(of:) is really a method belonging to Int.
+//
+//Let’s recap what else we learned:
+//
+//You can create your own structs by writing struct, giving it a name, then placing the struct’s code inside braces.
+//Structs can have variable and constants (known as properties) and functions (known as methods)
+//If a method tries to modify properties of its struct, you must mark it as mutating.
+//You can store properties in memory, or create computed properties that calculate a value every time they are accessed.
+//We can attach didSet and willSet property observers to properties inside a struct, which is helpful when we need to be sure that some code is always executed when the property changes.
+//Initializers are a bit like specialized functions, and Swift generates one for all structs using their property names.
+//You can create your own custom initializers if you want, but you must always make sure all properties in your struct have a value by the time the initializer finishes, and before you call any other methods.
+//We can use access to mark any properties and methods as being available or unavailable externally, as needed.
+//It’s possible to attach a property or methods directly to a struct, so you can use them without creating an instance of the struct.
