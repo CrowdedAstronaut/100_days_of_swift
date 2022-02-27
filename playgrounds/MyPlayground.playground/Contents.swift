@@ -404,3 +404,59 @@ var greeting = "Hello, playground"
 //var car = Car(model: "BMW X3", seats: 5, maximumGears: 8)
 //car.changeGear(difference: 1)
 //print(car.gear)
+
+
+class Game {
+	var score = 0 {
+		didSet {
+			print("Score is now \(score)")
+		}
+	}
+}
+
+var newGame = Game()
+newGame.score += 10
+
+
+//Classes and structs give Swift developers the ability to create custom, complex types with properties and methods, but they have five important differences:
+//
+//Classes do not come with synthesized memberwise initializers.
+//One class can be built upon (“inherit from”) another class, gaining its properties and methods.
+//Copies of structs are always unique, whereas copies of classes actually point to the same shared data.
+//Classes have deinitializers, which are methods that are called when an instance of the class is destroyed, but structs do not.
+//Variable properties in constant classes can be modified freely, but variable properties in constant structs cannot.
+
+
+class Employee {
+	let hours: Int
+
+	init(hours: Int) {
+		self.hours = hours
+	}
+}
+
+class Developer: Employee {
+	func work() {
+		print("I'm writing code for \(hours) hours.")
+	}
+}
+
+class Manager: Employee {
+	func work() {
+		print("I'm going to meetings for \(hours) hours.")
+	}
+}
+
+
+let robert = Developer(hours: 8)
+let joseph = Manager(hours: 10)
+robert.work()
+joseph.work()
+
+let novall = Developer(hours: 8)
+novall.printSummary()
+
+
+override func printSummary() {
+	print("I'm a developer who will sometimes work \(hours) a day, but other times spend hours arguing about whether code should be indented using tabs or spaces.")
+}
