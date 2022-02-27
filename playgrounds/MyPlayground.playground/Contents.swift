@@ -382,25 +382,25 @@ var greeting = "Hello, playground"
 //We can use access to mark any properties and methods as being available or unavailable externally, as needed.
 //It’s possible to attach a property or methods directly to a struct, so you can use them without creating an instance of the struct.
 
-//
-//struct Car {
-//	let model: String
-//	let seats: Int
-//	let maximumGears: Int
-//	private (set) var gear = 1
-//	
-//	mutating func changeGear(difference: Int) {
-//		gear = gear + difference
-//		
-//		if gear < 1 {
-//			gear = 1
-//		} else if gear > maximumGears {
-//			gear = maximumGears
-//		}
-//	}
-//}
-//
-//
-//var car = Car(model: "BMW X3", seats: 5, maximumGears: 8)
-//car.changeGear(difference: 1)
-//print(car.gear)
+
+struct Car {
+	let model: String
+	let seats: Int
+	let maximumGears: Int
+	private (set) var gear = 1
+	
+	mutating func changeGear(difference: Int) {
+		gear = gear + difference
+		
+		if gear < 1 {
+			gear = 1
+		} else if gear > maximumGears {
+			gear = maximumGears
+		}
+	}
+}
+
+
+var car = Car(model: "BMW X3", seats: 5, maximumGears: 8)
+car.changeGear(difference: 1)
+print(car.gear)
