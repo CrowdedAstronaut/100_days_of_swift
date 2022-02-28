@@ -405,17 +405,8 @@ var greeting = "Hello, playground"
 //car.changeGear(difference: 1)
 //print(car.gear)
 
+//
 
-class Game {
-	var score = 0 {
-		didSet {
-			print("Score is now \(score)")
-		}
-	}
-}
-
-var newGame = Game()
-newGame.score += 10
 
 
 //Classes and structs give Swift developers the ability to create custom, complex types with properties and methods, but they have five important differences:
@@ -481,3 +472,30 @@ newGame.score += 10
 //
 //let teslaX = Car(isElectric: true, isConvertible: false)
 //
+
+
+//class User {
+//	var username = "Anonymous"
+//}
+//
+
+//user2.username = "Taylor"
+
+
+
+
+class User {
+	var username = "Anonymous"
+
+	func copy() -> User {
+		let user = User()
+		user.username = username
+		return user
+	}
+}
+var user1 = User()
+//
+var user2 = user1.copy()
+user2.username = "Taylor"
+print(user1.username)
+print(user2.username)
