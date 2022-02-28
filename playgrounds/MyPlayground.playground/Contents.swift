@@ -484,18 +484,38 @@ var greeting = "Hello, playground"
 
 
 
-class User {
-	var username = "Anonymous"
-
-	func copy() -> User {
-		let user = User()
-		user.username = username
-		return user
-	}
-}
-var user1 = User()
+//class User {
+//	var username = "Anonymous"
 //
-var user2 = user1.copy()
-user2.username = "Taylor"
-print(user1.username)
-print(user2.username)
+//	func copy() -> User {
+//		let user = User()
+//		user.username = username
+//		return user
+//	}
+//}
+//var user1 = User()
+////
+//var user2 = user1.copy()
+//user2.username = "Taylor"
+//print(user1.username)
+//print(user2.username)
+
+
+//How to create a deinitializer for a class
+//class User {
+//	let id: Int
+//
+//	init(id: Int) {
+//		self.id = id
+//		print("User \(id): I'm alive!")
+//	}
+//
+//	deinit {
+//		print("User \(id): I'm dead!")
+//	}
+//}
+//
+//for i in 1...3 {
+//	let user = User(id: i)
+//	print("User \(user.id): I'm in control!")
+//}
