@@ -544,3 +544,47 @@ var greeting = "Hello, playground"
 //Third, if you create a class instance then take copies of it, all those copies point back to the same instance. This means changing some data in one of the copies changes them all.
 //Fourth, classes can have deinitializers that run when the last copy of one instance is destroyed.
 //Finally, variable properties inside class instances can be changed regardless of whether the instance itself was created as variable.
+//
+//
+//class Animal {
+//	let legs: Int
+//	
+//	init(legs: Int) {
+//		self.legs = legs
+//	}
+//	
+//}
+//
+//class Dog: Animal {
+//	func speak(){
+//		print("Bark, Bark, Bark")
+//	}
+//	
+//}
+//
+//
+//class Corgi: Dog {
+//	override func speak() {
+//		print("yip, yip, yip")
+//	}
+//}
+//
+//class Poodle: Dog {
+//	override func speak() {
+//		print("yap yap yap")
+//	}
+//}
+//
+//
+//class Cat: Animal  {
+//	let isTame: Bool
+//	
+//	init(legs: Int, isTame: Bool) {
+//		self.isTame = isTame
+//		super.init(legs: legs)
+//	}
+//	
+//	func speak(){
+//		print("meow")
+//	}
+//}
