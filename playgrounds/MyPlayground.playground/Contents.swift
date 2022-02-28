@@ -519,3 +519,28 @@ var greeting = "Hello, playground"
 //	let user = User(id: i)
 //	print("User \(user.id): I'm in control!")
 //}
+
+//
+//class User {
+//	var name = "Paul"
+//}
+//
+//let user = User()
+//user.name = "Taylor"
+//print(user.name)
+
+
+//So, we end up with four options:
+//
+//Constant instance, constant property – a signpost that always points to the same user, who always has the same name.
+//Constant instance, variable property – a signpost that always points to the same user, but their name can change.
+//Variable instance, constant property – a signpost that can point to different users, but their names never change.
+//Variable instance, variable property – a signpost that can point to different users, and those users can also change their names.
+
+
+//Classes have lots of things in common with structs, including the ability to have properties and methods, but there are five key differences between classes and structs.
+//First, classes can inherit from other classes, which means they get access to the properties and methods of their parent class. You can optionally override methods in child classes if you want, or mark a class as being final to stop others subclassing it.
+//Second, Swift doesn’t generate a memberwise initializer for classes, so you need to do it yourself. If a subclass has its own initializer, it must always call the parent class’s initializer at some point.
+//Third, if you create a class instance then take copies of it, all those copies point back to the same instance. This means changing some data in one of the copies changes them all.
+//Fourth, classes can have deinitializers that run when the last copy of one instance is destroyed.
+//Finally, variable properties inside class instances can be changed regardless of whether the instance itself was created as variable.
