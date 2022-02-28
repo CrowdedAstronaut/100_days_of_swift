@@ -427,36 +427,57 @@ newGame.score += 10
 //Variable properties in constant classes can be modified freely, but variable properties in constant structs cannot.
 
 
-class Employee {
-	let hours: Int
+//class Employee {
+//	let hours: Int
+//
+//	init(hours: Int) {
+//		self.hours = hours
+//	}
+//}
+//
+//class Developer: Employee {
+//	func work() {
+//		print("I'm writing code for \(hours) hours.")
+//	}
+//}
+//
+//class Manager: Employee {
+//	func work() {
+//		print("I'm going to meetings for \(hours) hours.")
+//	}
+//}
+//
+//
+//let robert = Developer(hours: 8)
+//let joseph = Manager(hours: 10)
+//robert.work()
+//joseph.work()
+//
+//let novall = Developer(hours: 8)
+//novall.printSummary()
+//
+//
+//override func printSummary() {
+//	print("I'm a developer who will sometimes work \(hours) a day, but other times spend hours arguing about whether code should be indented using tabs or spaces.")
+//}
 
-	init(hours: Int) {
-		self.hours = hours
-	}
-}
 
-class Developer: Employee {
-	func work() {
-		print("I'm writing code for \(hours) hours.")
-	}
-}
-
-class Manager: Employee {
-	func work() {
-		print("I'm going to meetings for \(hours) hours.")
-	}
-}
-
-
-let robert = Developer(hours: 8)
-let joseph = Manager(hours: 10)
-robert.work()
-joseph.work()
-
-let novall = Developer(hours: 8)
-novall.printSummary()
-
-
-override func printSummary() {
-	print("I'm a developer who will sometimes work \(hours) a day, but other times spend hours arguing about whether code should be indented using tabs or spaces.")
-}
+//class Vehicle {
+//	let isElectric: Bool
+//
+//	init(isElectric: Bool) {
+//		self.isElectric = isElectric
+//	}
+//}
+//
+//class Car: Vehicle {
+//	let isConvertible: Bool
+//
+//	init(isElectric: Bool, isConvertible: Bool) {
+//		self.isConvertible = isConvertible
+//		super.init(isElectric: isElectric)
+//	}
+//}
+//
+//let teslaX = Car(isElectric: true, isConvertible: false)
+//
