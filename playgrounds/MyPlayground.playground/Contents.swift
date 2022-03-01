@@ -756,3 +756,32 @@ var greeting = "Hello, playground"
 //
 //let numbers3 = ["four": 4, "eight": 8, "fifteen": 15, "sixteen": 16]
 //let allEven3 = numbers3.allSatisfy { $0.value.isMultiple(of: 2) }
+
+
+protocol Building {
+	var rooms: Int {get}
+	var cost: Int {get set}
+	var agent: String{get set}
+	func printSummary()
+}
+
+struct House: Building {
+	var rooms: Int
+	var cost: Int
+	var agent: String
+	func printSummary() {
+		print("Talk to \(agent) to buy this house for $\(cost)")
+	}
+}
+
+struct Office: Building {
+	var rooms: Int
+	var cost: Int
+	var agent: String
+	func printSummary() {
+		print("Talk to \(agent) to buy this office for $\(cost)")
+	}
+}
+
+let exampleHouse = House(rooms: 4, cost: 400_000, agent: "Swift & Co.")
+exampleHouse.printSummary()
