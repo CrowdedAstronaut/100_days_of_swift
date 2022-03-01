@@ -463,6 +463,8 @@ var greeting = "Hello, playground"
 //
 //class Car: Vehicle {
 //	let isConvertible: Bool
+//	let name = "Car"
+//	var currentPassengers = 1
 //
 //	init(isElectric: Bool, isConvertible: Bool) {
 //		self.isConvertible = isConvertible
@@ -472,18 +474,18 @@ var greeting = "Hello, playground"
 //
 //let teslaX = Car(isElectric: true, isConvertible: false)
 //
-
-
+//
+//
 //class User {
 //	var username = "Anonymous"
 //}
 //
-
+//
 //user2.username = "Taylor"
-
-
-
-
+//
+//
+//
+//
 //class User {
 //	var username = "Anonymous"
 //
@@ -499,8 +501,8 @@ var greeting = "Hello, playground"
 //user2.username = "Taylor"
 //print(user1.username)
 //print(user2.username)
-
-
+//
+//
 //How to create a deinitializer for a class
 //class User {
 //	let id: Int
@@ -519,7 +521,7 @@ var greeting = "Hello, playground"
 //	let user = User(id: i)
 //	print("User \(user.id): I'm in control!")
 //}
-
+//
 //
 //class User {
 //	var name = "Paul"
@@ -529,37 +531,37 @@ var greeting = "Hello, playground"
 //user.name = "Taylor"
 //print(user.name)
 
-
+//
 //So, we end up with four options:
 //
 //Constant instance, constant property – a signpost that always points to the same user, who always has the same name.
 //Constant instance, variable property – a signpost that always points to the same user, but their name can change.
 //Variable instance, constant property – a signpost that can point to different users, but their names never change.
 //Variable instance, variable property – a signpost that can point to different users, and those users can also change their names.
-
-
+//
+//
 //Classes have lots of things in common with structs, including the ability to have properties and methods, but there are five key differences between classes and structs.
 //First, classes can inherit from other classes, which means they get access to the properties and methods of their parent class. You can optionally override methods in child classes if you want, or mark a class as being final to stop others subclassing it.
 //Second, Swift doesn’t generate a memberwise initializer for classes, so you need to do it yourself. If a subclass has its own initializer, it must always call the parent class’s initializer at some point.
 //Third, if you create a class instance then take copies of it, all those copies point back to the same instance. This means changing some data in one of the copies changes them all.
 //Fourth, classes can have deinitializers that run when the last copy of one instance is destroyed.
 //Finally, variable properties inside class instances can be changed regardless of whether the instance itself was created as variable.
-//
-//
+
+
 //class Animal {
 //	let legs: Int
-//	
+//
 //	init(legs: Int) {
 //		self.legs = legs
 //	}
-//	
+//
 //}
 //
 //class Dog: Animal {
 //	func speak(){
 //		print("Bark, Bark, Bark")
 //	}
-//	
+//
 //}
 //
 //
@@ -578,17 +580,17 @@ var greeting = "Hello, playground"
 //
 //class Cat: Animal  {
 //	let isTame: Bool
-//	
+//
 //	init(legs: Int, isTame: Bool) {
 //		self.isTame = isTame
 //		super.init(legs: legs)
 //	}
-//	
+//
 //	func speak(){
 //		print("meow")
 //	}
 //}
-
+//
 //
 //func commute(distance: Int, using vehicle: Car) {
 //	// lots of code here
@@ -597,28 +599,35 @@ var greeting = "Hello, playground"
 //func commute(distance: Int, using vehicle: Train) {
 //	// lots of code here
 //}
-//
+
 //protocol Vehicle {
+//	var name: String { get }
+//	var currentPassengers: Int { get set }
 //	func estimateTime(for distance: Int) -> Int
 //	func travel(distance: Int)
-//	
 //}
 //
+//
 //struct Car: Vehicle {
+//	let name = "Car"
+//	var currentPassengers = 1
+//
 //	func estimateTime(for distance: Int) -> Int {
 //		distance / 50
 //	}
-//	
+//
 //	func travel(distance: Int) {
 //		print("I'm driving \(distance)km.")
 //	}
-//	
+//
 //	func openSunroof() {
 //		print("It's a nice day!")
 //	}
 //}
 //
 //struct Bicycle: Vehicle {
+//	let name = "Bicycle"
+//	var currentPassengers = 1
 //	func estimateTime(for distance: Int) -> Int {
 //		distance / 10
 //	}
@@ -643,10 +652,13 @@ var greeting = "Hello, playground"
 //
 //let car = Car()
 //commute(distance: 100, using: car)
-
-protocol Vehicle {
-	var name: String { get }
-	var currentPassengers: Int { get set }
-	func estimateTime(for distance: Int) -> Int
-	func travel(distance: Int)
-}
+//
+//
+//func getTravelEstimates(using vehicles: [Vehicle], distance: Int) {
+//	for vehicle in vehicles {
+//		let estimate = vehicle.estimateTime(for: distance)
+//		print("\(vehicle.name): \(estimate) hours to travel \(distance)km")
+//	}
+//}
+//
+//getTravelEstimates(using: [car, bike], distance: 150)
