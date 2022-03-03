@@ -840,3 +840,39 @@ var greeting = "Hello, playground"
 //This is also a bit confusing when you think about empty strings, “”. That string contains nothing, but that isn’t the same thing as nil – an empty string is still a string.
 //
 //When you’re learning, optionals can feel really painful – you might think Swift doesn’t need them, you might think they just get in the way, and you might grind your teeth every time you have to use them. But please trust me on this: after a few months they will make perfect sense, and you’ll wonder how you survived without them!
+
+//
+//func getUsername() -> String? {
+//	"Taylor"
+//}
+//
+//if let username = getUsername() {
+//	print("Username is \(username)")
+//} else {
+//	print("No username")
+//}
+
+
+//func printSquare(of number: Int?) {
+//	guard let number = number else {
+//		print("Missing input")
+//		return
+//	}
+//
+//	print("\(number) x \(number) is \(number * number)")
+//}
+
+//
+//func printSquare(of number: Int?) {
+//	guard let number = number else {
+//		print("Missing input")
+//
+//		// 1: We *must* exit the function here
+//		return
+//	}
+//
+//	// 2: `number` is still available outside of `guard`
+//	print("\(number) x \(number) is \(number * number)")
+//}
+
+
