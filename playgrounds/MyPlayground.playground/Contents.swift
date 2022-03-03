@@ -757,31 +757,86 @@ var greeting = "Hello, playground"
 //let numbers3 = ["four": 4, "eight": 8, "fifteen": 15, "sixteen": 16]
 //let allEven3 = numbers3.allSatisfy { $0.value.isMultiple(of: 2) }
 
+//
+//protocol Building {
+//	var rooms: Int {get}
+//	var cost: Int {get set}
+//	var agent: String{get set}
+//	func printSummary()
+//}
+//
+//struct House: Building {
+//	var rooms: Int
+//	var cost: Int
+//	var agent: String
+//	func printSummary() {
+//		print("Talk to \(agent) to buy this house for $\(cost)")
+//	}
+//}
+//
+//struct Office: Building {
+//	var rooms: Int
+//	var cost: Int
+//	var agent: String
+//	func printSummary() {
+//		print("Talk to \(agent) to buy this office for $\(cost)")
+//	}
+//}
+//
+//let exampleHouse = House(rooms: 4, cost: 400_000, agent: "Swift & Co.")
+//exampleHouse.printSummary()
 
-protocol Building {
-	var rooms: Int {get}
-	var cost: Int {get set}
-	var agent: String{get set}
-	func printSummary()
-}
 
-struct House: Building {
-	var rooms: Int
-	var cost: Int
-	var agent: String
-	func printSummary() {
-		print("Talk to \(agent) to buy this house for $\(cost)")
-	}
-}
-
-struct Office: Building {
-	var rooms: Int
-	var cost: Int
-	var agent: String
-	func printSummary() {
-		print("Talk to \(agent) to buy this office for $\(cost)")
-	}
-}
-
-let exampleHouse = House(rooms: 4, cost: 400_000, agent: "Swift & Co.")
-exampleHouse.printSummary()
+//let opposites = [
+//	"Mario": "Wario",
+//	"Luigi": "Waluigi"
+//]
+//
+//let peachOpposite = opposites["Peach"]
+//
+//if let marioOpposite = opposites["Mario"] {
+//	print("Mario's opposite is \(marioOpposite)")
+//}
+//
+//
+//var username: String? = nil
+//
+//if let unwrappedName = username {
+//	print("We got a user: \(unwrappedName)")
+//} else {
+//	print("The optional was empty.")
+//}
+//
+//
+//func square(number: Int) -> Int {
+//	number * number
+//}
+//
+//var number: Int? = nil
+//if let unwrappedNumber = number {
+//	print(square(number: unwrappedNumber))
+//}
+//
+//if let number = number {
+//	print(square(number: number))
+//}
+//
+//Swift’s optionals are one of its most powerful features, while also being one of the most confusing. Their core job is simple: they allow us to represent the absence of some data – a string that isn’t just empty, but literally doesn’t exist.
+//
+//Any data type can be optional in Swift:
+//
+//An integer might be 0, -1, 500, or any other range of numbers.
+//An optional integer might be all the regular integer values, but also might be nil – it might not exist.
+//A string might be “Hello”, it might be the complete works of Shakespeare, or it might be “” – an empty string.
+//An optional string might be any regular string value, but also might be nil.
+//A custom User struct could contain all sorts of properties that describe a user.
+//An optional User struct could contain all those same properties, or not exist at all.
+//Making that distinction between “it could be any possible value for that type” and “it could be nil” is the key to understanding optionals, and it’s not easy sometimes.
+//
+//For example, think about Booleans: they can be true or false. That means an optional Bool can be true, false, or neither – it can be nothing at all. That’s a little hard to grasp mentally, because surely something is always true or false at any given time?
+//
+//Well, answer me this: do I like chocolate? Unless you’re a friend of mine or perhaps follow me very closely on Twitter, you can’t say for sure – you can’t definitely say True (I like chocolate) or False (I don’t like chocolate), because you just don’t know. Sure, you could ask me and find out, but until you do so the only safe answer is “I don’t know”, which in this case could be represented by making the Boolean an optional with a nil value.
+//
+//This is also a bit confusing when you think about empty strings, “”. That string contains nothing, but that isn’t the same thing as nil – an empty string is still a string.
+//
+//When you’re learning, optionals can feel really painful – you might think Swift doesn’t need them, you might think they just get in the way, and you might grind your teeth every time you have to use them. But please trust me on this: after a few months they will make perfect sense, and you’ll wonder how you survived without them!
