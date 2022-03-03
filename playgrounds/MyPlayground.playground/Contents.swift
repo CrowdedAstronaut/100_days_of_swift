@@ -939,3 +939,29 @@ var greeting = "Hello, playground"
 //
 //let scores = ["Picard": 800, "Data": 7000, "Troi": 900]
 //let crusherScore = scores["Crusher"] ?? 0
+
+
+//let names = ["Arya", "Bran", "Robb", "Sansa"]
+
+//let chosen = names.randomElement()?.uppercased() ?? "No one"
+//print("Next in line: \(chosen)")
+
+
+//let names = ["Arya", "Bran", "Robb", "Sansa"]
+//
+//let chosen = names.randomElement()?.uppercased() ?? "No one"
+//print("Next in line: \(chosen)")
+//
+//
+//struct Book {
+//	let title: String
+//	let author: String?
+//}
+//
+//var book: Book? = nil
+//let author = book?.author?.first?.uppercased() ?? "A"
+//print(author)
+//
+//
+//let names2 = ["Vincent": "van Gogh", "Pablo": "Picasso", "Claude": "Monet"]
+//let surnameLetter = names2["Vincent"]?.first?.uppercased()
