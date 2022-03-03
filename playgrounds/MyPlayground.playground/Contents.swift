@@ -876,3 +876,33 @@ var greeting = "Hello, playground"
 //}
 
 
+//func getMeaningOfLife() -> Int? {
+//	42
+//}
+//
+//func printMeaningOfLife() {
+//	guard let name = getMeaningOfLife() else {
+//		return
+//	}
+//
+//	print(name)
+//}
+
+
+//let url = URL(string: "https://www.apple.com")!
+//
+//let randomNumber = (1...10).randomElement()!
+//
+////enum Direction: CaseIterable {
+////	case north, south, east, west
+////}
+////
+////let randomDirection = Direction.allCases.randomElement()!
+//
+//enum Direction: CaseIterable {
+//	case north, south, east, west
+//
+//	static func random() -> Direction {
+//		Direction.allCases.randomElement()!
+//	}
+//}
